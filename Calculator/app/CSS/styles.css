@@ -1,0 +1,47 @@
+body {
+    position: relative;
+    background-color: rgb(73, 132, 134);
+    width: auto;
+    height: auto;
+}
+
+#container{
+    position: relative;
+    top: 25%;
+    left: 25%;
+    display: inline-block;
+    background-color: rgb(121, 23, 23);
+    border: 4px solid black;
+}
+
+div{
+    padding: 7px;
+}
+
+#textArea{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+}
+
+button{
+    border: 1px solid wheat;
+    border-radius: 25%;
+    padding: 12px;
+    width: 39px;
+    color: white;
+    background-color: #292b53;
+    font-size: 13px;
+    /* border-radius: 30%; */
+}
+
+#equal{
+    position: absolute;
+    top: 36%;
+    left: 73%;
+    float: right;
+    border-radius: 5%;
+    height: 200px;
+    margin: 0px 0px;
+}

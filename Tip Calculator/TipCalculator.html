@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+ 	<meta charset="utf-8">
+ 	<link rel="stylesheet" href="app/css/style.css">
+ 	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<title>TIP CALCULATOR</title>
+	
+
+	
+
+ </head>
+
+
+ <body>
+	<h1>TIP CALCULATOR</h1>
+	<!--<nav id='navigation'>
+		<strong>TIP CALCULATOR</strong>
+	</nav>-->
+	<div id="formContainer">
+ 	<form>
+	<div>
+
+	  <p id="billText">How much was your bill?</p>
+	  <p>$<input id="billamount" class="inputField" type="text" placeholder="Bill Amount">
+    
+    </div>
+    <div>
+
+    	<p>How was your service?</p>
+	   <select id= ratingSelect class="inputField" name="rating" required>
+	   	<option value="" disabled selected>
+	   	-- Choose an Options --
+	   </option>
+		<option id="outstanding" value="0.3">30% - Outstanding</option>
+		<option id="good" value="0.2">20% - Good</option>
+		<option id="it was ok" value="0.15">15% - It was OK</option>
+		<option id="bad" value="0.1">10% - Bad</option>
+		<option id="terrible" value="0.05">5% - Terrible</option>
+
+	 </select>
+
+	</div>
+
+	<div>
+	  <p>How many people are sharing the bill?</p>
+            
+	  <input id="numberOfPeopleInput" class="inputField" type="Number" placeholder="Number of People">people
+
+	</div>
+  </form>
+  <div id="resultSection">
+  <button id="cButton" onclick="calculateTip();">CALCULATE TIP</button>
+
+  <p id="showResult"></p>
+  
+</div>
+  
+
+ </body>
+</div>
+ <script type="text/javascript" src="app/js/Exe.js"></script>
+</html>

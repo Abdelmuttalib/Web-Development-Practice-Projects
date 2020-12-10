@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>STOP WATCH</title>
+        <style>
+            body{
+                background: #196e52;
+                color: black;
+                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                font-size: 50px; 
+                text-align: center;
+            }
+            button{
+                background: #196e52;
+                color:black;
+                font-size: 22px;
+                border: 2px solid black;
+                border-radius: 10px;
+                padding: 19px 70px;
+            }
+            button:hover{
+                background: rgb(255, 255, 255);
+                color: #0e3528;
+                border: none;
+                transition-property: all;
+                transition-duration: 1s;
+                transform: scale(1.1);
+                /* transform: rotate(360deg);
+                transform: translate(-20px, 0px); */
+            }
+        </style>
+    </head>
+    <!-- B O D Y -->
+    <body>
+      <div id="container">
+
+        <p>STOPWATCH</p>
+
+        <p>VANILLA JAVASCRIPT STOPWATCH</p>
+
+        <div id="timer">00:00</div><br>
+
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+        <!-- create 3 stopwatches 
+         <div class="stopwatch"></div>
+        <div class="stopwatch"></div>
+        <div class="stopwatch"></div> -->
+
+      </div>
+    </body>
+    <script type="text/JAVASCRIPT">
+        
+        var main = document.createElement("p");
+        main.href = "#" + "One";
+        main.innerHTML = "One"
+        container.appendChild(main);
+
+        var options = options || {};
+        options.delay = options.delay || 1;
+
+        var offset = Date.now();
+        //var intervals = setInterval(update, options.delay);
+        
+        /*function update() {
+            clock += delta();
+            render();
+        }*/
+
+        console.log(offset);
+        //console.log(intervals);
+    </script>
+</html>

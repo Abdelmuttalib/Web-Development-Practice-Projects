@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Hind Siliguri';
+            text-align: center;
+            background: rgb(116, 44, 44);
+            width: 100%;
+            height: 100%;
+        }
+        h2{
+            font-weight: 10;
+            font-size: 70px;
+            margin: 0px;
+        }
+        #h2{
+            font-size: 30px;
+            font-weight: 600;
+            color: rgb(247, 72, 139);
+            padding-top: -10px
+        }
+        #mall{
+            width: 85%;
+            margin: auto;
+        }
+        #bigContainer{
+            width: 100%;
+            background: rgb(39, 122, 97);
+            text-align: left;
+        }
+        table {
+            border: 0.6 solid black;
+            border-collapse: collapse;
+            width: 70%;
+            margin: auto;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even){
+            background: #f2f0f2;
+        }
+        th{
+            border: 1px solid rgb(0, 0, 0, 0.1);
+        }
+        button{
+            font-family: 'Hind Siliguri', sans-serif;
+            background: lightcoral;
+            border: none;
+            border-radius: 2px;
+            width: 20%;
+            padding: 5px;
+            margin: 0px;
+        }
+        #name{
+            width: 100%;
+        }
+        #removeButton{
+            width: 100%;
+        }
+        #addExpense{
+            font-size: 17px;
+            font-weight: 600;
+            background: rgb(0, 168, 73, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <div id="h2">Add A New Item:</div>
+    <div id="mall">
+    <div id="bigContainer">
+    <label for="name">Name: </label><input id="name" type="name" placeholder="Where was the expense made?"><br>
+    <label for="date">Date: </label><input id="date" type="date"><br><label for="amount">Amount: </label><input id="amount" type="number" min="1" step="any">
+    <button id="addExpense">Add Expense</button>
+    <br>
+    <div>
+    <table id="table">
+        <tr id="tableHeader">
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Alaa</td>
+            <td>7/6/2020</td>
+            <td>$15</td>
+            <td><button id="removeButton">X</button></td>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>9/9/2019</td>
+            <td>$21</td>
+        </tr>
+        <tr>
+            <td>Ali</td>
+            <td>9/9/2019</td>
+            <td>$21</td>
+        </tr>
+    </table>
+</div>
+</div>
+</div>
+</body>
+<script>
+
+    var addExpense = document.getElementById('addExpense');
+    addExpense.addEventListener('click', function(){
+      var name = document.getElementById('name').value;
+      var date = document.getElementById('date').value;
+      var amount = document.getElementById('amount').value;
+
+      var dop = document.createElement('tr');
+      var header = document.getElementById('tableHeader');
+      //
+      dop.innerHTML = "<td>"+name+"</td><td>"+date+"</td><td>$"+amount+"</td><button class='added'>X</button>";
+      header.parentElement.append(dop);
+        event.preventDefault;
+        if(name == "" || date == "" || amount == ""){
+            alert("ENTER FORMs");
+            return;
+        }}, false);
+
+
+
+        var remove = document.getElementById('removeButton');
+
+        remove.addEventListener('click', function(){
+            var tr = remove.closest('tr');
+            var tableBody = tr.closest('tbody');
+            tableBody.removeChild(tr);
+        }, false);
+
+
+
+
+/*
+        var toClick = document.querySelectorAll('.added');
+        toClick.forEach(item => {
+          item.addEventListener('click', () => {
+            event.preventDefault;
+          var td = toClick.parentElement;
+          var tr = td.parentElement;
+          var table = tr.parentElement;
+          table.removeChild(tr);
+        });
+});*/
+var row = document.querySelectorAll('.added');
+document.addEventListener("DOMContentLoaded", function(){
+
+         for(var i = 0; i < row.length; i++){
+           var current = row[i];
+            current.addEventListener("click", function(){
+              var tr = current.closest('tr');
+            var table = tr.closest('tbody');
+            table.removeChild(tr);
+          });
+}});
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>COUNTER</title>
+    <style>
+      body{
+        background: rgb(88, 28, 30);
+        height: 90vh;
+      }
+      .container{
+        background: rgb(136, 55, 58);
+        box-shadow: 5px 10px 5px #000000;
+        width: 75%;
+        height: 75%;
+        border: 1px solid black;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        top: 15%;
+        left: 15%;
+        right: 15%;
+        bottom: 15%;
+      }
+      h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 50px;
+      }
+      .number{
+        font-family: 'Franklin Gothic Medium';
+        position: relative;
+        top: 11%;
+        font-size: 100px;
+      }
+      #clicks{
+        position: relative;
+        top: 30%;
+      }
+      button{
+        position: relative;
+        top: 80%;
+        width: 40%;
+        box-shadow: 2px 4px 2px #888888;
+        font-size: 17px;
+        border-radius: 10px;
+        padding: 5px;
+        margin: 10px;
+      }
+      #lower{
+        background: #c9c8c6;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: relative;
+        left: -13px;
+      }
+      #add{
+        background: #c9c8c6;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        position: relative;
+        right: -13px;
+      }
+      #lower:hover{
+        background: #3a494b;
+      }
+      #add:hover{
+        background: #3a494b;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>COUNTER</h1>
+
+      <div id="number" class="number" value="0">0</div>
+
+      <div id="clicks">
+        <button id="lower" type="button">LOWER COUNT</button>
+        <button id="add" type="button">ADD COUNT</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    // Get the Minus and Addition Buttons
+    var lowerCount = document.getElementById('lower');
+    var addCount = document.getElementById('add');
+    // Get the Number
+    var number = document.getElementById('number');
+    // add Event Listeners to Buttons
+    lowerCount.addEventListener("click", function(){
+      if(number.innerText <= 0){
+      number.style = "color: #e8583a";
+      } else if(number.innerText == 1){
+        number.style = "color: black";
+      }
+      number.innerText = eval(number.innerText += "-1");
+    }, false);
+
+    addCount.addEventListener("click", function(){
+      if(number.innerText >= 0){
+      number.style = "color: #32a877";
+      } else if(number.innerText == -1){
+        number.style = "color: black";
+      }
+      number.innerText = eval(number.innerText += "+1");
+    }, false);
+
+  </script>
+</html>

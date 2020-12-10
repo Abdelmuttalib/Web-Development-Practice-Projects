@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<link rel="stylesheet" href="app/CSS/styles.css">-->
+    <title>GRID Calculator</title>
+    <style>
+    body{
+      background: gray;
+      position: relative;
+      height: 100px;
+      justify-content: center;
+    }
+
+    .container{
+      background: #444;
+      border: 5px solid black;
+      border-radius: 5%;
+      width: 50%;
+      position: relative;
+      top: 50%;
+      left: 25%;
+      display: grid;
+    }
+
+    #textArea{
+      padding: 10px;
+      font-size: 40px;
+    }
+
+    .operations{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(40px, auto);
+      padding: 5px;
+      grid-gap: 3px;
+      background: #444;
+    }
+
+    .buttons{
+      background: #2E3C33;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      border-radius: 10px;
+      font-style: italic;
+    }
+
+    .equal{
+      display: grid;
+      padding-top: 5px;
+      padding-right: 5px;
+      padding-bottom: 5px;
+      border-radius: 10%;
+      background: #2E3C33;
+      font-style: italic;
+    }
+    #equal{
+      background: #376;
+      border-radius: 10px;
+      font-size: 25px;
+    }
+    #equal:hover{
+      background: #d7d7ca;
+    }
+
+    .numbers{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-auto-rows: minmax(40px, auto);
+      padding: 5px;
+      grid-gap: 3px;
+      border-radius: 10%;
+      background: #2E3C33;
+    }
+    .sty{
+      /*background: black;*/
+      border-radius: 20%;
+      background: #376;
+      font-style: italic;
+      font-size: 20px;
+    }
+    .sty:hover{
+      background: #d7d7ca;
+    }
+    .ope{
+      border-radius: 20%;
+      background: #376;
+      font-size: 27px;
+    }
+    .ope:hover{
+      background: #d7d7ca;
+    }
+  </style>
+</head>
+<body>
+   <div class="container">
+    <div id="textArea">
+        <textarea id="textField"></textarea>
+    </div>
+    <!--NUMBERS-->
+    <div class="operations">
+
+        <button id="plus" class="ope" onclick="doAction(plus)" value="+">+</button>
+        <button id="minus" class="ope" onclick="doAction(minus)" value="-">-</button>
+        <button id="multiply" class="ope" onclick="doAction(multiply)" value="*">*</button>
+        <button id="divide" class="ope" onclick="doAction(divide)" value="/">/</button>
+    </div>
+
+    <div class="buttons">
+
+      <div class="numbers">
+        <button id="seven" class="sty" onclick="doAction(seven)" value="7">7</button>
+        <button id="eight" class="sty" onclick="doAction(eight)" value="8">8</button>
+        <button id="nine" class="sty" onclick="doAction(nine)" value="9">9</button>
+
+
+        <button id="four" class="sty" onclick="doAction(four)" value="4">4</button>
+        <button id="five" class="sty" onclick="doAction(five)" value="5">5</button>
+        <button id="six" class="sty" onclick="doAction(six)" value="6">6</button>
+
+
+        <button id="one" class="sty" onclick="doAction(one)" value="1">1</button>
+        <button id="two" class="sty" onclick="doAction(two)" value="2">2</button>
+        <button id="three" class="sty" onclick="doAction(three)" value="3">3</button>
+
+
+        <button id="zero" class="sty" onclick="doAction(zero)" value="0">0</button>
+        <button id="point" class="sty" onclick="doAction(point)" value=".">.</button>
+        <button  id="clear" class="sty" onclick="doClear()" value="">C</button>
+
+        </div>
+        <div class="equal">
+          <button id="equal" onclick="doCalculate()">=</button>
+        </div>
+        </div>
+   </div>
+</body>
+
+<script type="text/javascript" src="app/JS/run.js"></script>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <title>Flex Box</title>
+    <!-- S T Y L E -->
+    <style>
+
+       
+
+      body{
+        background: rgb(247, 247, 247);
+        font-family: 'Hind Siliguri', cursive;
+        color:black;
+      }
+      /* Media Query */
+      @media(min-width: 468px){
+        .container-1{
+        display: flex;
+        /*
+        align-items: flex-start;
+        align-items: flex-start;
+        align-items: center;
+        flex-direction: column; column-reverse
+        flex-direction: row; row-reverse // DEFAULT
+        */
+        
+      }
+
+      .container-2{
+        display: flex;
+        /*
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+
+        justify-content: space-between;
+        justify-content: space-around;
+        */
+        justify-content: space-between;
+        
+      }
+      }
+
+      .container-3{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+
+      .container-1 div, .container-2 div, .container-3 div{
+        border: 1px #ccc solid;
+        padding: 10px;
+      }
+
+      .box-1{
+        flex: 2;
+        order: 2;
+      }
+
+      .box-2{
+        flex: 1;
+        order: 1;
+      }
+
+      .box-3{
+        flex: 1;
+        order: 3;
+
+      }
+
+      .container-2-box{
+        flex-basis: 27%;
+      }
+
+      .container-3-box{
+        flex-basis: 15%;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+<strong>
+    <div class="container-1">
+      
+      <div class="box-1">
+        <h3>Box One</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="box-2">
+        <h3>Box Two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="box-3">
+        <h3>Box Three</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+    
+    </div>
+
+    <div class="container-2">
+      <div class="container-2-box">
+        <h3>Box Four</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam minus cumque, totam placeat fuga doloribus tempore maiores. Porro libero omnis nulla. Similique et maiores voluptas temporibus at porro magni commodi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor deserunt nam odit sint officia recusandae, rerum molestiae a eveniet dolore ratione. Ullam odit autem culpa! Delectus cupiditate repellendus explicabo fugiat.</p>
+      </div>
+      <div class="container-2-box">
+        <h3>Box Five</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit dolorum esse inventore, accusamus, qui distinctio laudantium voluptatem numquam ex quaerat vel ipsum repellat cumque saepe quis minima voluptates repellendus ab! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis iure qui impedit saepe dolor magnam voluptates veniam earum possimus error porro illo aliquid rem blanditiis nisi corrupti, quibusdam neque officia!</p>
+      </div>
+      <div class="container-2-box">
+        <h3>Box Six</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, quod? Atque doloremque, cum, nihil a dolores saepe iure ipsam vero animi sequi minus non, exercitationem dolore. Cum provident necessitatibus quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam rerum quo corrupti unde! Quam, delectus placeat commodi odio dolorum, voluptatibus officiis, vero necessitatibus animi fugiat saepe magnam voluptatem consequatur temporibus?</p>
+      </div>
+    </div>
+
+    <div class="container-3">
+      <div class="container-3-box">
+        <h3>Box Seven</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt impedit delectus recusandae harum quidem distinctio? Necessitatibus iure facilis officia error nesciunt dolor iste quaerat qui? Iste illum magni sunt!</p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Eight</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt impedit delectus recusandae harum quidem distinctio? Necessitatibus iure facilis officia error nesciunt dolor iste quaerat qui? Iste illum magni sunt!</p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Nine</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt impedit delectus recusandae harum quidem distinctio? Necessitatibus iure facilis officia error nesciunt dolor iste quaerat qui? Iste illum magni sunt!</p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Ten</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt impedit delectus recusandae harum quidem distinctio? Necessitatibus iure facilis officia error nesciunt dolor iste quaerat qui? Iste illum magni sunt!</p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Eleven</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt impedit delectus recusandae harum quidem distinctio? Necessitatibus iure facilis officia error nesciunt dolor iste quaerat qui? Iste illum magni sunt!</p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Twelve</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, incidunt impedit delectus recusandae harum quidem distinctio? Necessitatibus iure facilis officia error nesciunt dolor iste quaerat qui? Iste illum magni sunt!</p>
+      </div>
+    </div>
+  </strong>
+  </body>
+</html>
