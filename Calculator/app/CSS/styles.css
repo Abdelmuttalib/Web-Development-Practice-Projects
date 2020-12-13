@@ -1,4 +1,91 @@
-body {
+body{
+  background: gray;
+  position: relative;
+  height: 100px;
+  justify-content: center;
+}
+
+.container{
+  background: #444;
+  border: 5px solid black;
+  border-radius: 5%;
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 25%;
+  display: grid;
+}
+
+#textArea{
+  padding: 10px;
+  font-size: 40px;
+}
+
+.operations{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(40px, auto);
+  padding: 5px;
+  grid-gap: 3px;
+  background: #444;
+}
+
+.buttons{
+  background: #2E3C33;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.equal{
+  display: grid;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-radius: 10%;
+  background: #2E3C33;
+  font-style: italic;
+}
+#equal{
+  background: #376;
+  border-radius: 10px;
+  font-size: 25px;
+}
+#equal:hover{
+  background: #d7d7ca;
+}
+
+.numbers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(40px, auto);
+  padding: 5px;
+  grid-gap: 3px;
+  border-radius: 10%;
+  background: #2E3C33;
+}
+.sty{
+  /*background: black;*/
+  border-radius: 20%;
+  background: #376;
+  font-style: italic;
+  font-size: 20px;
+}
+.sty:hover{
+  background: #d7d7ca;
+}
+.ope{
+  border-radius: 20%;
+  background: #376;
+  font-size: 27px;
+}
+.ope:hover{
+  background: #d7d7ca;
+}
+
+
+/**body {
     position: relative;
     background-color: rgb(73, 132, 134);
     width: auto;
@@ -34,8 +121,8 @@ button{
     background-color: #292b53;
     font-size: 13px;
     /* border-radius: 30%; */
-}
-
+/*}
+/**
 #equal{
     position: absolute;
     top: 36%;
@@ -44,4 +131,4 @@ button{
     border-radius: 5%;
     height: 200px;
     margin: 0px 0px;
-}
+}**/
