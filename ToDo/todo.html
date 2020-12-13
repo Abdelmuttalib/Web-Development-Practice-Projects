@@ -47,7 +47,7 @@
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
   }
-  
+
   .icons{
     max-width: 50%;
     background: rgb(247, 245, 245);
@@ -95,7 +95,7 @@ if(input == ""){
     return;
 }
 
-  
+
 
 var span = document.createElement('span');
 span.innerText = input;
@@ -132,7 +132,7 @@ clear.addEventListener('click', clearList, false);
 function clearList(){
   event.preventDefault;
     for(var i = 0; i < selectSpan.length; i++){
-      div.removeChild(selectSpan[i]);
+      selectSpan[i].remove();
     }
 }
 
