@@ -24,7 +24,7 @@ var done = document.createElement('button');
   done.id = "done";
   done.innerHTML = "&#10004"; // By Dec value
   done.addEventListener('click', function(){
-      alert("KAFOO");
+      alert("EXCELLENT");
   });
 
 var remove = document.createElement('button');
