@@ -30,11 +30,20 @@ function createPost(post){
     
 }
 
-function printL(){
-    console.log("IT IS:");
-}
 
 
-//createPost({title:'Post Three', body: 'This is post three'})
-//.then(getposts)
-//.catch(err => console.log(err));
+/*createPost({title:'Post Three', body: 'This is post three'})
+.then(getposts)
+.catch(err => console.log(err)); */
+
+
+// Promise.all
+/*
+const promise1 = "Hello";
+const promise2 = 22;
+const promise3 = new Promise((resolve, reject) => setTimeout(resolve, 2000, "Good"));
+
+const promise4 = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
+
+Promise.all([promise1, promise2, promise3, promise4]).then(values => console.log(values));
+*/
